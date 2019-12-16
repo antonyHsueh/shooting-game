@@ -9,6 +9,7 @@ public class playerinput : MonoBehaviour
     public string keydown = "s";    
     public string keyright = "d";   
     public string keyleft = "a";  
+    public string keyfire = "Fire1";
     public float dup;
     public float dright;        
     public float dmag;

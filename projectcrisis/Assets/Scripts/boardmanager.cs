@@ -50,6 +50,7 @@ public class boardmanager : MonoBehaviour
     {
         
         boardholder = new GameObject("Board").transform;
+        boardholder.tag = "Board";
         GameObject player = Instantiate(Player[0], new Vector3(0f, 0f, 0f), Quaternion.identity) as GameObject;
         player.transform.SetParent(boardholder);
         for (int i = 0; i < rows; i++)
@@ -61,7 +62,7 @@ public class boardmanager : MonoBehaviour
                     GameObject tomake = mapT[Random.Range(0, mapT.Length)];
                     Vector3 ranpios = new Vector3(i*25f, j*25f, 0f); 
                     GameObject instance = Instantiate(tomake, ranpios, Quaternion.identity) as GameObject;
-
+                    //instance.name
                     maketunnel(i, j, instance);
 
                     instance.transform.SetParent(boardholder);

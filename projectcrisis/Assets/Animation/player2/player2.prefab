@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 8965963847538326720}
   - component: {fileID: 5368754460253474227}
   - component: {fileID: 6349605567389223684}
+  - component: {fileID: 8709071873421267733}
   m_Layer: 0
   m_Name: player2
   m_TagString: Player
@@ -270,7 +271,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5368754460253474227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +288,7 @@ MonoBehaviour:
   keydown: s
   keyright: d
   keyleft: a
+  keyfire: Fire1
   dup: 0
   dright: 0
   dmag: 0
@@ -308,5 +310,23 @@ MonoBehaviour:
   pi: {fileID: 0}
   rigid2d: {fileID: 0}
   walkspeed: 5
-  anim: {fileID: 0}
+  animbody: {fileID: 0}
+  animhead: {fileID: 0}
   sr: {fileID: 0}
+--- !u!114 &8709071873421267733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6931872820524618705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0d4a0a68fd15ce4687539cad79e2021, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapons:
+  - {fileID: 7744460095329807568, guid: 67d09ae55ad08744f86533349b8c60f8, type: 3}
+  current_weapon: 0
+  Sbullet: {fileID: 0}
+  pi: {fileID: 0}

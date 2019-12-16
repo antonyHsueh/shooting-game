@@ -25,8 +25,10 @@ public class CameraChange : MonoBehaviour
         
     }
     
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if(collision.CompareTag("Player") && !collision.isTrigger)
         {
             cam.SetActive(true);

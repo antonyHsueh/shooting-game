@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\boardmanager.cs" />
+    <Compile Include="Assets\Scripts\BulletControl.cs" />
     <Compile Include="Assets\Scripts\CameraChange.cs" />
     <Compile Include="Assets\Scripts\CameraControl.cs" />
     <Compile Include="Assets\Scripts\gamemanager.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Assets\Scripts\MummyControl.cs" />
     <Compile Include="Assets\Scripts\playeractor.cs" />
     <Compile Include="Assets\Scripts\playerinput.cs" />
+    <Compile Include="Assets\Scripts\WeaponControl.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
