@@ -14,12 +14,12 @@ public class playerinput : MonoBehaviour
     public float dright;        
     public float dmag;
     public Vector2 dvec;
-    
     private float targetdup;
     private float targetdright;
     private float velocitydup;
     private float velocitydright;
     public bool inputEnable = true;
+    public Vector2 mouse2d;
     
 
     // Start is called before the first frame update
@@ -48,6 +48,9 @@ public class playerinput : MonoBehaviour
         dmag = Mathf.Sqrt((dupc*dupc)+(drightc*drightc));
         dvec = drightc*transform.right+dupc*transform.up;
 
+
+        Vector3 i = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mouse2d = new Vector2(i.x, i.y);
     }
 
     private Vector2 SquareToCircle(Vector2 input)

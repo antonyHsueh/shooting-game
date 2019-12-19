@@ -56,4 +56,12 @@ public class MummyControl : MonoBehaviour
         //动画状态转换
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.CompareTag("bullet"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

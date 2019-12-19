@@ -19,7 +19,9 @@ public class BulletControl : MonoBehaviour
         record_direction_x = Input.GetAxisRaw("Horizontal");
         record_direction_y = Input.GetAxisRaw("Vertical");
         */
-        direction_bullet = GameObject.FindGameObjectWithTag("Player").GetComponent<playerinput>().dvec;
+        direction_bullet = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>().position;
+        direction_bullet = GameObject.FindGameObjectWithTag("Player").GetComponent<playerinput>().mouse2d - direction_bullet;
+        direction_bullet /= direction_bullet.magnitude;
     }
 
     // Update is called once per frame
@@ -37,8 +39,19 @@ public class BulletControl : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("enemy") || collision.collider.CompareTag("Boarder"))
+        {
+            Destroy(gameObject);
+        }
+        
+        
+    }
     
-   
-   
-    
+
+
+
+
 }

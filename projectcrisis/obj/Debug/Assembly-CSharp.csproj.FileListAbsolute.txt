@@ -241,3 +241,7 @@ C:\Users\cchs1\Documents\unityproject\projectcrisis\obj\Debug\Assembly-CSharp.cs
 C:\Users\cchs1\Documents\unityproject\projectcrisis\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\cchs1\Documents\unityproject\projectcrisis\obj\Debug\Assembly-CSharp.dll
 C:\Users\cchs1\Documents\unityproject\projectcrisis\obj\Debug\Assembly-CSharp.pdb
+C:\Users\cchs1\Documents\GitHub\shooting-game\projectcrisis\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\cchs1\Documents\GitHub\shooting-game\projectcrisis\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\cchs1\Documents\GitHub\shooting-game\projectcrisis\obj\Debug\Assembly-CSharp.dll
+C:\Users\cchs1\Documents\GitHub\shooting-game\projectcrisis\obj\Debug\Assembly-CSharp.pdb

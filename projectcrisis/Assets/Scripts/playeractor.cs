@@ -11,8 +11,7 @@ public class playeractor : MonoBehaviour
     public Animator animbody;
     public Animator animhead;
     public SpriteRenderer sr;
-
-
+   
     void Awake()
     {
         pi = GetComponent<playerinput> ();
@@ -36,8 +35,10 @@ public class playeractor : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigid2d.position += pi.dvec * walkspeed * Time.fixedDeltaTime;
+       rigid2d.position += pi.dvec * walkspeed * Time.fixedDeltaTime;
         
+
+
         animbody.SetFloat("vecx", Mathf.Abs(pi.dvec.x));
         animbody.SetFloat("vecy", pi.dvec.y);
         animhead.SetFloat("vecx", Mathf.Abs(pi.dvec.x));
