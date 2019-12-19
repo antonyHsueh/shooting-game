@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class MummyControl : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float speed;
+    public Rigidbody2D rigid2d;
+    public float speed = 3;
     public Animator anim;
-    public LayerMask ground;
+    public GameObject player;
     public Collider2D coll;
+    public Vector2 dvec;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigid2d = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        coll = GetComponent<CircleCollider2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -22,48 +26,34 @@ public class MummyControl : MonoBehaviour
     }
     void SwitchAnim()
     {
-        anim.SetFloat("running_x", 0);
-        anim.SetFloat("running_y_front", 0);
-        anim.SetFloat("running_y_back", 0);
-        //
 
     }
     void Movement()
     {
-        float horizontalmove = Input.GetAxis("Horizontal");
-        float facedirection_x = Input.GetAxisRaw("Horizontal");
-        // float facedirection_y = Input.GetAxisRaw("Vertical");
-        float vertical = Input.GetAxis("Vertical");
-
+        dvec = player.GetComponent<Rigidbody2D>().position - rigid2d.position;
+        dvec /= dvec.magnitude;
+        rigid2d.position += dvec * speed * Time.fixedDeltaTime;
         //角色移动
-        if (horizontalmove != 0 || vertical != 0)
+        anim.SetFloat("vecx", Mathf.Abs(dvec.x));
+        anim.SetFloat("vecy", dvec.y);
+        if (dvec.x < 0)
         {
-            rb.velocity = new Vector2(horizontalmove * speed * Time.deltaTime, vertical * speed * Time.deltaTime);
-            anim.SetFloat("running_x", Mathf.Abs(facedirection_x));
-            if (facedirection_x != 0)
-            {
-                transform.localScale = new Vector3(facedirection_x, 1, 1);
-            }
-
-            if (vertical > 0)
-            {
-                anim.SetFloat("running_y_back", Mathf.Abs(vertical));
-            }
-            else
-            {
-                anim.SetFloat("running_y_front", Mathf.Abs(vertical));
-            }
+            transform.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            transform.GetComponent<SpriteRenderer>().flipX = false;
         }
 
 
-        
+
+
 
 
 
 
 
         //动画状态转换
-        //  SwitchAnim();
 
     }
 }

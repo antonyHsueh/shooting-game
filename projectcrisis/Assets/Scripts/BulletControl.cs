@@ -6,6 +6,7 @@ public class BulletControl : MonoBehaviour
 {
     public Rigidbody2D rb_bullet;
     public float speed_bullet = 10.0f;
+    public float lifetime = 100.0f;
     Vector2 direction_bullet;
 
     //float record_direction_x;
@@ -30,11 +31,14 @@ public class BulletControl : MonoBehaviour
     void Fly_Bullet()
     {
         rb_bullet.position += direction_bullet * speed_bullet * Time.fixedDeltaTime;
+        lifetime -= Time.fixedDeltaTime;
+        if (lifetime < 0)
+        {
+            Destroy(gameObject);
+        }
     }
     
    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
-    }
+   
+    
 }

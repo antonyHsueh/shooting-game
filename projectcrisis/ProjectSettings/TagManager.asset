@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Board
   - Boarder
+  - bullet
   layers:
   - Default
   - TransparentFX

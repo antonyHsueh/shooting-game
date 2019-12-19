@@ -95,7 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141421860}
   - component: {fileID: 141421861}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: CameraBorder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1889,7 +1889,7 @@ GameObject:
   - component: {fileID: 492369506856636959}
   m_Layer: 0
   m_Name: Map1
-  m_TagString: Untagged
+  m_TagString: Boarder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1945,6 +1945,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 62020133}
+  enemy:
+  - {fileID: 8421989237063560910, guid: 37e7dd40209185b4485eaa355a0b7eb2, type: 3}
+  control: {fileID: 0}
 --- !u!60 &492369506856636959
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1970,10 +1973,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 12.018954, y: 12.183289}
-      - {x: -12.236463, y: 11.959646}
-      - {x: -12.0764065, y: -12.150804}
-      - {x: 12.234827, y: -12.144953}
+    - - {x: 12.5, y: 12.5}
+      - {x: -12.5, y: 12.5}
+      - {x: -12.5, y: -12.5}
+      - {x: 12.5, y: -12.5}
 --- !u!1 &1396847372260175883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,7 +1989,7 @@ GameObject:
   - component: {fileID: 1396847372260175894}
   - component: {fileID: 1396847372260175893}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -133,3 +133,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb_bullet: {fileID: 0}
   speed_bullet: 10
+  lifetime: 5

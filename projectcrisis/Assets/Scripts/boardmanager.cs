@@ -62,7 +62,6 @@ public class boardmanager : MonoBehaviour
                     GameObject tomake = mapT[Random.Range(0, mapT.Length)];
                     Vector3 ranpios = new Vector3(i*25f, j*25f, 0f); 
                     GameObject instance = Instantiate(tomake, ranpios, Quaternion.identity) as GameObject;
-                    //instance.name
                     maketunnel(i, j, instance);
 
                     instance.transform.SetParent(boardholder);
